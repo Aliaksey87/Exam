@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
        <!-- Техническая информация о документе -->
@@ -17,10 +17,10 @@
   <header class="header">
     <div class="container">
       <div class="flexheader">
-        <p><img class="logostyle" src="../img/logo.gif" alt="LOGO"></p>
+        <p><img class="logostyle" src="static/img/logo.gif" alt="LOGO"></p>
         <div class="flex01">
-          <p class="styletext01"><a href="" style="color: rgba(255, 255, 255, 0.7)">Часы ГРИ</a></p>
-          <p class="styletext01"><a href="" style="color: rgba(255, 255, 255, 0.7)">Полезные ссылки</a></p>
+          <p class="styletext01"><a href="" style="color: rgba(255, 255, 255, 0.7)">Купить готовые</a></p>
+          <p class="styletext01"><a href="" style="color: rgba(255, 255, 255, 0.7)">Как собрать самому</a></p>
           <p class="styletext01"><a href="" style="color: rgba(255, 255, 255, 0.7)">Контакты</a></p>
        </div>
       </div>
@@ -40,7 +40,8 @@
                     <li><a class="navtextstyle01" href="#%D0%9F%D0%9B%D0%90%D0%A2%D0%AB" title="ПЛАТЫ">ПЛАТА</a></li>
                     <li><a class="navtextstyle01" href="#%D0%9F%D0%A0%D0%9E%D0%A8%D0%98%D0%92%D0%9A%D0%90" title="ПРОШИВКА">ПРОШИВКА</a>
                     <li><a class="navtextstyle01" href="#%D0%A1%D0%91%D0%9E%D0%A0%D0%9A%D0%90" title="СБОРКА">СБОРКА</a></li>
-                    <li><a class="navtextstyle01" href="#%D0%92%D0%90%D0%A0%D0%98%D0%90%D0%9D%D0%A2%D0%AB_%D0%9A%D0%9E%D0%A0%D0%9F%D0%A3%D0%A1%D0%90" title="ВАРИАНТЫ КОРПУСА">ВАРИАНТЫ КОРПУСА</a></li>
+                    <li><a class="navtextstyle01" href="#%D0%92%D0%90%D0%A0%D0%98%D0%90%D0%9D%D0%A2%D0%AB_%D0%9A%D0%9E%D0%A0%D0%9F%D0%A3%D0%A1%D0%90" title="Сделать запрос">ВАРИАНТЫ КОРПУСА</a></li>
+
                 </ul>
         </nav>
     </div>
@@ -90,8 +91,8 @@
                 <li><a>Перебор катодов</a></li>
                 <li><a>Случайный глюк</a></li>
             </ul>
-        <iframe width="640" height="480"
-            src="../video/demonstrate.mp4"
+        <iframe width="700" height="480"
+            src="static/video/demonstrate.mp4"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
         </iframe>
@@ -179,14 +180,13 @@
         </div>
         <hr>
   <!-- ПЛАТА -->
-        <h2 class="textstyle02""><span class="ez-toc-section" id="%D0%9F%D0%9B%D0%90%D0%A2%D0%AB"></span>
-            ПЛАТA<span class="ez-toc-section-end"></span>
-        </h2>
+        <h2 class="textstyle02"><span class="ez-toc-section" id="%D0%9F%D0%9B%D0%90%D0%A2%D0%AB"></span>
+            ПЛАТA<span class="ez-toc-section-end"></span></h2>
         <hr>
         <p class="textstyle03"> Плата универсальная. Она разведена под ИН-12 и ИН-14 одновременно. Нужно запаять 4 лампы одного из типов.</p>
-        <img src="../img/board.png">
+        <img src="../static/img/board.png">
         <p class="textstyle03">Проект в EasyEda - <a class="button_download01" href="https://easyeda.com/editor#id=f4b0a83b937d4647bea192438b0bb4d1">перейти.</a></p>
-        <p class="textstyle03">Скачать архивом GERBER - <a class="button_download01" href="../download/Gerber_NIXIE in14_12 neon (2x layer) 08.06.2021.zip">скачать.</a></p>
+        <p class="textstyle03">Скачать архивом GERBER - <a class="button_download01" href="../download/Gerber_NIXIE in14_12 neon (2x layer) 08.06.2021.zip" download>скачать.</a></p>
 
 
   <!-- ПРОШИВКА -->
@@ -199,7 +199,7 @@
 
 
         <div  class="textstyle03">
-            <p>Скачать архив с прошивками zip  - <a class="button_download01" href="../download/NixieClock_v2_firmware.zip">скачать.</a></p>
+            <p>Скачать архив с прошивками zip  - <a class="button_download01" href="../download/NixieClock_v2_firmware.zip" download>скачать.</a></p>
             <p>Прошивки находятся в скачанном архиве в папке&nbsp;<u>firmware</u>:</p>
             <ul>
                 <li>lamp_test – прошивка для теста ламп, перебирает цифры на лампах по очереди (сначала 0–9 на первой, потом на второй…), пауза перебора задаётся в самом начале скетча</li>
@@ -207,7 +207,7 @@
                 <li>nixieClock_2_v2.5 – основная прошивка часов, со всеми эффектами, временем.</li>
                 </ul>
             <p>В самом начале кода находятся настройки. Самая важная для вас – выбор типа платы, по умолчанию выбрана плата под ИН-12. Для ИН-14 нужно сменить цифру с нуля на 2, получится  BOARD_TYPE 2.</p>
-            <img src="../img/board_type.png">
+            <img src="../static/img/board_type.png">
         </div>
 
 
@@ -236,27 +236,15 @@
             </ol>
         </div>
 
-<!-- ВАРИАНТЫ КОРПУСА -->
+<!-- СБОРКА -->
         <hr>
         <h2 class="textstyle02"><span class="ez-toc-section" id="%D0%92%D0%90%D0%A0%D0%98%D0%90%D0%9D%D0%A2%D0%AB_%D0%9A%D0%9E%D0%A0%D0%9F%D0%A3%D0%A1%D0%90"></span>
-            ВАРИАНТЫ КОРПУСА<span class="ez-toc-section-end"></span>
+            СДЕЛАТЬ ЗАПРОС<span class="ez-toc-section-end"></span>
         </h2>
         <hr>
-        <p  class="textstyle03">Незначительный допнабор на специальностях «Экологический менеджмент и аудит в промышленности»,
-            «Инновационная техника для строительного комплекса (управление подразделениями инженерных войск)» и «Техническая
-            эксплуатация автомобилей (военная автомобильная техника)» (на всех по одному вакантному месту).
-
-        БГСХА — 112
-        Вторым учебным заведением по количеству свободных мест на бюджет в этом году стала сельскохозяйственная академия
-            в Горках. В объявлении на сайте вуза не указано, сколько всего абитуриентов не хватило для выполнения плановых
-            показателей, но сайт kudapostupat.by приводит данные в 112 человек.
-я допнабор объявил и ведущий вуз страны. На дневную бесплатную форму обучения БГУ готов принять 36 человек. На механико-
-            математическом факультете свободны 14 мест на специальности «математика» (научно-педагогическая и научно-
-            конструкторская деятельность), 11 — на физфаке и 11 в МГЭИ им. А. Д. Сахарова по направлениям «Природоохранная
-            деятельность», «Энергоэффективные технологии и энергетический менеджмент» и «Ядерная и радиационная безопасность».
-
-        </p>
     </div>
+    <!-- ВАРИАНТЫ КОРПУСА -->
+
 </div>
 
 </section>
