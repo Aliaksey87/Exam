@@ -27,7 +27,7 @@ a {
 .container {
   font-family: Open Sans, serif;
   width: 1180px;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 .logostyle {
   position: absolute;
@@ -76,16 +76,36 @@ a {
   width: 175px;
   height: 210px;
 }
+.navtextstyle01 {
+  width: max-content;
+  /*height: 42px;*/
+  margin: 10px 0 10px 0;
+  /*padding: 11px 26px;*/
+  display: block;
+  /*border: 1px solid #FFFFFF;*/
+  text-decoration: none;
+  /*box-sizing: border-box;*/
+  background: none;
+  /*font-family: Open Sans, serif;*/
+  /*font-style: normal;*/
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+  text-align: center;
+  color: rgba(0, 128, 0, 0.84);
+}
+.navtextstyle01:hover{
+  color: green;
+  /*border: 1px solid red;*/
 
+}
+.textstyle02 {
+  color: white;
+  margin: 10px auto;
 
-
-
-
-
-
-
-.main_content {
-  height: calc(100vh - 70px);
+}
+.textstyle03 {
+  color: white;
 }
 
 
@@ -97,8 +117,9 @@ a {
 
 
 
-
-
+.main_content {
+  height: calc(100vh - 70px);
+}
 .flexcentr {
   display: flex;
   flex-direction: row;
