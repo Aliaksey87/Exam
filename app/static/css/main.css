@@ -27,7 +27,7 @@ a {
 .container {
   font-family: Open Sans, serif;
   width: 1180px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 .logostyle {
   position: absolute;
@@ -102,8 +102,6 @@ a {
 .textstyle02 {
   color: white;
   margin: 10px auto;
-
-
 }
 .textstyle03 {
   color: white;
