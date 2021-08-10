@@ -67,7 +67,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  text-align: center;
+  text-align: end;
+  /*align-items: end;*/
 }
 .navicontent {
   padding: 0 0 0 0;
