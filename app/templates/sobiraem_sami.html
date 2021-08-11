@@ -71,9 +71,7 @@
                 </li>
                 <li>Блок питания 5 V / 500 мА минимум <a href="https://ali.ski/GY9BJ">https://ali.ski/GY9BJ</a>, <a href="https://ali.ski/IWE3W">https://ali.ski/IWE3W</a></li></ul>
         </div>
-
-
-
+            
    <!-- Плата -->
         <hr>
         <h2 class="textstyle02"><span id="%D0%9E%D0%9F%D0%98%D0%A1%D0%90%D0%9D%D0%98%D0%95"></span>Плата</h2>
@@ -81,8 +79,10 @@
         <p class="textstyle03"> Плата универсальная. Она разведена под ИН-12 и ИН-14 одновременно. Нужно запаять 4 лампы одного из типов. То есть берёте плату и впаиваете либо 12 либо 14 лампы. Потом в прошивке укажете номер соответствующих ламп.</p>
         <img src="../static/img/board.png" alt="board">
             <br><br>
+        <p class="textstyle03">В EasyEda есть проект этой платы. Можно там подсмотреть расположение деталей и их номиналы. Там же можно сгенерировать gerber-файлы для заказа у китайцев печатных плат.</p>
         <p class="textstyle03">Проект в EasyEda - <a class="button_download01" href="https://easyeda.com/editor#id=f4b0a83b937d4647bea192438b0bb4d1" target="_blank">перейти.</a></p>
-        <p class="textstyle03">Скачать архивом GERBER - <a class="button_download01" href="../download/Gerber_NIXIE_in14_12_neon_08.06.2021.zip" download>скачать.</a></p>
+        <p class="textstyle03">Ниже выкладываю ссылку на архив с уже сгенерированными герберами. Можно этот архив загружать для заказа печататных плат у китайцев.</p>
+        <p class="textstyle03">Скачать архивом GERBER - <a class="button_download01" href="../static/download/Gerber_NIXIE%20in14_12%20neon%20(2x%20layer)%2008.06.2021.zip" download>скачать.</a></p>
 
   <!-- ПРОШИВКА -->
         <hr>
@@ -90,7 +90,7 @@
         </h2>
         <hr>
         <div class="textstyle03">
-            <p>Скачать архив с прошивками zip  - <a class="button_download01" href="../download/NixieClock_v2_firmware.zip" download>скачать.</a></p>
+            <p>Скачать архив с прошивками zip  - <a class="button_download01" href="../static/download/NixieClock_v2_firmware.zip" download>скачать.</a></p>
             <p>Прошивки находятся в скачанном архиве в папке&nbsp;<u>firmware</u>:</p>
             <ul>
                 <li>lamp_test – прошивка для теста ламп, перебирает цифры на лампах по очереди (сначала 0–9 на первой, потом на второй…), пауза перебора задаётся в самом начале скетча</li>
@@ -98,10 +98,10 @@
                 <li>nixieClock_2_v2.5 – основная прошивка часов, со всеми эффектами, временем.</li>
                 </ul>
             <p>В самом начале кода находятся настройки. Самая важная для вас – выбор типа платы, по умолчанию выбрана плата под ИН-12. Для ИН-14 нужно сменить цифру с нуля на 2, получится  BOARD_TYPE 2.</p>
+            <p>Есть ещё другие настройки. Менять их следует осторожно. Можно после каждого изменения прошивать часы и убеждаться в работоспособности. </p>
             <br>
             <img src="../static/img/board_type.png" alt="board_type">
         </div>
-
 
 <!-- СБОРКА -->
         <hr>
@@ -125,6 +125,21 @@
                 <li>Если всё нормально – прошиваем актуальную прошивку часов&nbsp;<strong>nixieClock_2_v2.5</strong>&nbsp;и наслаждаемся!</li>
             </ol>
         </div>
+
+<!-- Видео процесса сборки -->
+        <hr>
+        <h2 class="textstyle02"><span class="ez-toc-section" id="%D0%A1%D0%91%D0%9E%D0%A0%D0%9A%D0%90"></span>Видео процесса сборки<span class="ez-toc-section-end"></span></h2>
+        <hr>
+        <div class="textstyle03">
+            <p>Подробное видео с последовательной сборкой и настройкой.</p>
+
+        </div>
+        <iframe width="640" height="480"
+            src="https://www.youtube.com/embed/MAuBdVe959Y?controls=1&amp;rel=0&amp"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+        <hr>
         </div>
     </div>
 </section>
