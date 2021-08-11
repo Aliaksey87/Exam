@@ -33,11 +33,9 @@
     <div class="flexclockpage">
         <div>
             <hr>
-            <h2 class="textstyle02"><span id="%D0%9E%D0%9F%D0%98%D0%A1%D0%90%D0%9D%D0%98%D0%95"></span>
-                Немного о часах
-                </h2>
+            <h2 class="textstyle02"><span id="%D0%9E%D0%9F%D0%98%D0%A1%D0%90%D0%9D%D0%98%D0%95"></span>Немного о часах</h2>
             <hr>
-            <p class="textstyle03">Страница посвящена доступному проекту часов на газоразрядных индикаторах и Arduino.</p>
+            <p class="textstyle03">Страница посвящена доступному проекту часов на газоразрядных индикаторах с Arduino nano.</p>
             <h3 class="textstyle03">Плата:</h3>
         <ul class="textstyle03">
             <li>Габариты платы меньше 100х100мм, то есть можно их заказать у китайцев по минимальныи ценам</li>
@@ -45,12 +43,22 @@
             <li>Количество компонентов сведено к минимуму!</li>
             <li>На данный момент в проекте плата под индикаторы ИН-12 либо ИН-14. Универсальная под оба вида ламп</li>
             <li>Система состоит из двух плат: нижней (вся управляющая электроника) и верхней (лампы и светодиоды подсветки)</li>
-            <li>Нижняя плата может быть распаянной с: 5 оптопарами и точка – неонка либо 4 оптопары и точка - светодиод</li>
-            <li>Выбор установленных ламп в часы происходит в прошивке</li>
+            <li>Нижняя плата может быть распаянной с: 5 оптопарами (точка – неонка) либо 4 оптопары и резистор (точка - светодиод)</li>
+            <li>Выбор установленных ламп в часы происходит в прошивке. В разделе "Собираем сами" про это упоминается</li>
         </ul>
-        <h3 class="textstyle03">Аппаратные фишки:</h3>
-        <ul class="textstyle03"><li>Сердце платы – полноразмерная;<strong>Arduino NANO</strong>, это означает простую сборку и прошивку</li><li>Питание всей схемы –&nbsp;<strong>5 Вольт</strong></li><li>Генератор высокого напряжения раскачивается ШИМ каналом Arduino</li><li>Напряжение генератора подстраивается резистором с крутилкой</li><li>Время задаёт&nbsp;<strong>RTC DS3231</strong></li><li>3 кнопки для настройки времени и будильника</li><li>Пищалка для будильника</li><li><strong>Подсветка</strong>&nbsp;ламп индикаторов</li><li>Проект основан на плате&nbsp;<strong>Железнякова Андрея</strong>. Спасибо! Ссылка на проект:&nbsp;<a href="https://goo.gl/xTVQWP" rel="nofollow">https://goo.gl/xTVQWP</a></li></ul>
-        <h3 class="textstyle03">Программные фишки:</h3>
+        <h3 class="textstyle03">Аппаратные возможности:</h3>
+        <ul class="textstyle03">
+            <li>Сердце платы – полноразмерная <strong>Arduino NANO</strong>, это означает простую сборку и прошивку</li>
+            <li>Питание всей схемы – <strong>5 Вольт</strong>. Ни больше ни меньше</li>
+            <li>Генератор высокого напряжения раскачивается ШИМ каналом Arduino</li>
+            <li>Напряжение генератора подстраивается подстроечным резистором</li>
+            <li>Время задают часы реального времени <strong>RTC DS3231</strong></li>
+            <li>3 кнопки для настройки времени, эффектов переключения и будильника</li>
+            <li>Пищалка для будильника</li>
+            <li>Светодиодная подсветка ламп индикаторов</li>
+            <!-- <li>Проект основан на плате&nbsp;<strong>Железнякова Андрея</strong>. Спасибо! Ссылка на проект:&nbsp;<a href="https://goo.gl/xTVQWP" rel="nofollow">https://goo.gl/xTVQWP</a></li></ul> -->
+        </ul>
+        <h3 class="textstyle03">Программные возможности:</h3>
         <ul class="textstyle03"><li>“Перебор” цифр, не дающий индикаторам окисляться</li>
             <li>Плавное изменение яркости точки и подсветки ламп</li>
             <li>Настройка яркости цифр, “точки” и подсветки ламп</li>
@@ -60,68 +68,37 @@
             <li>Будильника нет</li>
         </ul>
         <hr>
-        <h2 class="textstyle02">
-            <span class="ez-toc-section" id="%D0%AD%D0%A4%D0%A4%D0%95%D0%9A%D0%A2%D0%AB"></span>
-            ЭФФЕКТЫ<span class="ez-toc-section-end"></span>
-        </h2>
+        <h2 class="textstyle02"><span class="ez-toc-section" id="%D0%AD%D0%A4%D0%A4%D0%95%D0%9A%D0%A2%D0%AB"></span>ЭФФЕКТЫ<span class="ez-toc-section-end"></span></h2>
         <hr>
-        <p class="textstyle03"> Видео с демонстрацией переходов:
-        </p>
-            <ul class="textstyle03">
-                <li><a>Нет эффекта</a></li>
-                <li><a>Плавный переход</a></li>
-                <li><a>Перебор цифр</a></li>
-                <li><a>Перебор катодов</a></li>
-                <li><a>Случайный глюк</a></li>
-            </ul>
+        <p class="textstyle03"> Эффекты при смене цифр индикации:</p>
+        <ul class="textstyle03">
+            <li><a>Нет эффекта</a></li>
+            <li><a>Плавный переход</a></li>
+            <li><a>Перебор цифр</a></li>
+            <li><a>Перебор катодов</a></li>
+            <li><a>Случайный глюк (фаотичное помаргивание одной из цифр)</a></li>
+        </ul>
+        <p class="textstyle03"> Видео с демонстрацией эффектов (нарезка моментов с эффектами):</p>
         <iframe width="640" height="480"
-            src="../video/demonstrate.mp4"
+            src="../static/video/demonstrate.mp4"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
         </iframe>
-            <hr>
-        <h2 class="textstyle02"><span class="ez-toc-section" id="%D0%92%D0%98%D0%94%D0%95%D0%9E"></span>
-            ВИДЕО<span class="ez-toc-section-end"></span>
-        </h2>
         <hr>
-        <section class="elementor-section elementor-inner-section elementor-element elementor-element-68a9bf3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="68a9bf3" data-element_type="section">
-            <div class="elementor-container elementor-column-gap-default">
-                <div class="elementor-row">
-                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4bf8282" data-id="4bf8282" data-element_type="column">
-                        <div class="elementor-column-wrap elementor-element-populated">
-                            <div class="elementor-widget-wrap">
-                                <div class="elementor-element elementor-element-5f2d9679 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="5f2d9679" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=MAuBdVe959Y&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
-                                            <iframe class="elementor-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="700" height="480" src="https://www.youtube.com/embed/MAuBdVe959Y?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Falexgyver.ru&amp;widgetid=1" id="widget2" data-gtm-yt-inspected-1_25="true">
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-bc7aab8" data-id="bc7aab8" data-element_type="column">
-                        <div class="elementor-column-wrap elementor-element-populated">
-                            <div class="elementor-widget-wrap">
-                                <div class="elementor-element elementor-element-c0b110d elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="c0b110d" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=QmEYgXPZfIE&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}" data-widget_type="video.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
-                                            <iframe class="elementor-video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="700" height="480" src="https://www.youtube.com/embed/QmEYgXPZfIE?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Falexgyver.ru&amp;widgetid=3" id="widget4" data-gtm-yt-inspected-1_25="true">
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <h2 class="textstyle02"><span class="ez-toc-section" id="%D0%92%D0%98%D0%94%D0%95%D0%9E"></span>ВИДЕО<span class="ez-toc-section-end"></span></h2>
         <hr>
-            </div>
+        <p class="textstyle03">Видео о первом тестовом запуске часов на одни сутки. Все часы проработали 24 часа и продолжали исправно работать. Это говорит об успешном завершении сборки часов. Можно браться за изготовление коруса.</p>
+        <iframe width="640" height="480"
+            src="https://www.youtube.com/embed/QmEYgXPZfIE?controls=1&amp;rel=0&amp"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+        <hr>
         </div>
-    </section>
+    </div>
+
+
+</section>
 
 
 

@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
        <!-- Техническая информация о документе -->
     <meta charset="UTF-8"> <!-- Определяем кодировку символов документа -->
@@ -32,19 +32,102 @@
 <section class="container">
     <div class="flexclockpage">
         <div>
-            <hr>
-            <h2 class="textstyle02"><span id="%D0%9E%D0%9F%D0%98%D0%A1%D0%90%D0%9D%D0%98%D0%95"></span>
-                sobiraem_sami Собираем сами
-                </h2>
-            <hr>
-            <p class="textstyle03">Страница посвящена доступному проекту часов на газоразрядных индикаторах и Arduino. Односторонняя плата, выводные компоненты!</p>
-            <hr>
-            </div>
+        <hr>
+        <h2 class="textstyle02"><span id="%D0%9E%D0%9F%D0%98%D0%A1%D0%90%D0%9D%D0%98%D0%95"></span>Как собрать самому. Краткое руководство.</h2>
+        <hr>
+
+   <!-- Список деталей -->
+        <div class="textstyle03">
+            <p>Список деталей и ссылки на них для заказа. Если какие-то ссылки не работают, то поищите аналогичное у других продавцов.</p>
+            <ul>
+                <li>Arduino Nano <a href="https://ali.ski/855YJH">aliexpress</a></li>
+                <li>Часы реального времени DS3231 mini <a href="https://ali.ski/3iYLk" aria-describedby="tooltip_qbjd87i0o6">aliexpress</a></li>
+                <li>Гнёзда на плату <a href="https://www.chipdip.by/product/pbs-40" rel="nofollow">https://www.chipdip.by/product/pbs-40</a></li>
+                <li>Рейка штыревая <a href="https://www.chipdip.by/product/pls-40" rel="nofollow">https://www.chipdip.by/product/pls-40</a></li>
+                <li>Конденсатор электролитический 4,7 мкФ 350V <a href="https://www.chipdip.by/product0/33635" rel="nofollow">https://www.chipdip.by/product0/33635</a></li>
+                <li>Резистор подстроечный 470 кОм (можно 500 кОм) <a href="https://www.chipdip.by/product/3362p-1-504" rel="nofollow">https://www.chipdip.by/product/3362p-1-504</a></li>
+                <li>Индуктивность 220 мкГн(uH) <a href="https://www.chipdip.by/product/rlb0712-221kl" target="_blank" rel="noopener noreferrer">https://www.chipdip.by/product/rlb0712-221kl</a></li>
+                <li>Диод HER106 <a href="https://www.chipdip.by/product/her106" rel="nofollow">https://www.chipdip.by/product/her106 </a>Или диод BYV26C – он быстрее</li>
+                <li>Транзистор IRF840PBF <a href="https://www.chipdip.by/product/irf840" rel="nofollow">https://www.chipdip.by/product/irf840</a></li>
+                <li>Оптопара TLP627(F) DIP-4 <a href="https://www.chipdip.by/product/tlp627" rel="nofollow">https://www.chipdip.by/product/tlp627</a></li>
+                <li>Дешифратор К155ИД1 <a href="https://www.chipdip.by/product/k155id1" rel="nofollow">https://www.chipdip.by/product/k155id1</a></li>
+                <li>Светодиоды 5 мм <a href="https://www.chipdip.by/catalog/round-leds?x.222=s4Q&amp;x.226=EbW" target="_blank" rel="noopener noreferrer">https://www.chipdip.by/catalog/round-leds?x.222=s4Q&amp;x.226=EbW</a></li>
+                <li>Светодиоды 3 мм <a href="https://www.chipdip.by/catalog/round-leds?x.222=s4Q&amp;x.226=s4S" target="_blank" rel="noopener noreferrer">https://www.chipdip.by/catalog/round-leds?x.222=s4Q&amp;x.226=s4S</a></li>
+                <li>Резисторы 0.25 Вт для версии ИН12/ИН14 со светодиодной точкой:
+                    <ul>
+                        <li>150 Ом</li>
+                        <li>470 Ом</li>
+                        <li>10 кОм</li>
+                        <li>100 Ом – 3шт</li>
+                    </ul>
+                </li>
+                <li>Резисторы 0.25 Вт для версии ИН14 с неоновой точкой:
+                    <ul>
+                        <li>200 кОм</li>
+                        <li>470 Ом</li>
+                        <li>10 кОм</li>
+                        <li>100 Ом – 3шт</li>
+                    </ul>
+                </li>
+                <li>Блок питания 5 V / 500 мА минимум <a href="https://ali.ski/GY9BJ">https://ali.ski/GY9BJ</a>, <a href="https://ali.ski/IWE3W">https://ali.ski/IWE3W</a></li></ul>
         </div>
-    </section>
 
 
 
+   <!-- Плата -->
+        <hr>
+        <h2 class="textstyle02"><span id="%D0%9E%D0%9F%D0%98%D0%A1%D0%90%D0%9D%D0%98%D0%95"></span>Плата</h2>
+        <hr>
+        <p class="textstyle03"> Плата универсальная. Она разведена под ИН-12 и ИН-14 одновременно. Нужно запаять 4 лампы одного из типов. То есть берёте плату и впаиваете либо 12 либо 14 лампы. Потом в прошивке укажете номер соответствующих ламп.</p>
+        <img src="../static/img/board.png" alt="board">
+            <br><br>
+        <p class="textstyle03">Проект в EasyEda - <a class="button_download01" href="https://easyeda.com/editor#id=f4b0a83b937d4647bea192438b0bb4d1" target="_blank">перейти.</a></p>
+        <p class="textstyle03">Скачать архивом GERBER - <a class="button_download01" href="../download/Gerber_NIXIE_in14_12_neon_08.06.2021.zip" download>скачать.</a></p>
+
+  <!-- ПРОШИВКА -->
+        <hr>
+        <h2 class="textstyle02"><span class="ez-toc-section" id="%D0%9F%D0%A0%D0%9E%D0%A8%D0%98%D0%92%D0%9A%D0%90"></span>ПРОШИВКА<span class="ez-toc-section-end"></span>
+        </h2>
+        <hr>
+        <div class="textstyle03">
+            <p>Скачать архив с прошивками zip  - <a class="button_download01" href="../download/NixieClock_v2_firmware.zip" download>скачать.</a></p>
+            <p>Прошивки находятся в скачанном архиве в папке&nbsp;<u>firmware</u>:</p>
+            <ul>
+                <li>lamp_test – прошивка для теста ламп, перебирает цифры на лампах по очереди (сначала 0–9 на первой, потом на второй…), пауза перебора задаётся в самом начале скетча</li>
+                <li>nixieClock_2_test_v1.1 – “минимальная” прошивка чисто для работы с лампами, на её основе можно написать свои часы. В сыром виде прошивка перебирает по очереди цифры на всех лампах одновременно</li>
+                <li>nixieClock_2_v2.5 – основная прошивка часов, со всеми эффектами, временем.</li>
+                </ul>
+            <p>В самом начале кода находятся настройки. Самая важная для вас – выбор типа платы, по умолчанию выбрана плата под ИН-12. Для ИН-14 нужно сменить цифру с нуля на 2, получится  BOARD_TYPE 2.</p>
+            <br>
+            <img src="../static/img/board_type.png" alt="board_type">
+        </div>
+
+
+<!-- СБОРКА -->
+        <hr>
+        <h2 class="textstyle02"><span class="ez-toc-section" id="%D0%A1%D0%91%D0%9E%D0%A0%D0%9A%D0%90"></span>СБОРКА<span class="ez-toc-section-end"></span></h2>
+        <hr>
+        <div class="textstyle03">
+            <p>Последовательность сборки и настройки. Подробности по каждому пункту читай ниже.</p>
+            <ol>
+                <li>Полностью собрать нижнюю плату (можно не паять DS3231).</li>
+                <li><strong>Отмыть флюс!</strong>&nbsp;Зубной щёткой и спиртом/калошей, или на худой конец горячей водой.</li>
+                <li>Выставить подстоечный резистор напряжения в среднее положение.</li>
+                <li>Загрузить прошивку&nbsp;<strong>lamp_test</strong>, выбрав тип платы (читай код в самом начале).</li>
+                <li>Должен начать работать высоковольтный генератор. Напряжение может подниматься до <strong>350 вольт</strong>. Аккуратно. <strong>Высокое напряжение.</strong></li>
+                <li>Измеряем напряжение на конденсаторе в верхнем левом углу платы (мультиметр ставить в режим DC, напряжение 50-300 Вольт). Переменным резистором выставляем напряжение в районе 180-200 вольт</li>
+                <li>На данном этапе можно и нужно проверить лампы, подключив анод (белая нога) через резистор 10 кОм на “плюс” конденсатора, и любую другую ногу на “минус” конденсатора. Перебирая ноги минусовым проводом проверить все цифры индикатора. Если цифра горит не полностью, можно повысить напряжение и “прожечь” катод, или просто подождать. Лампы старые, могут начать нормально работать не сразу. <strong>ВНИМАНИЕ!</strong> Цифра (катод) в плохом “старом” состоянии потребляет бОльший ток, что может приводить к падению напряжения на генераторе и заветных 180В в работе вы не получите. Поэтому рекомендуется прокалить лампы от генератора в ручном режиме, как написано в начале этой строчки.</li>
+                <li>Далее можно смело паять лампы на верхнюю плату.</li>
+                <li>Обязательно отмыть флюс!</li>
+                <li>Соединяем верхнюю и нижнюю платы.</li>
+                <li>На прошивке&nbsp;<strong>lamp_test&nbsp;</strong>будут последовательно перебираться цифры на лампах на максимальной яркости, в порт будет выводиться текущая цифра. Снова берём отвёртку и подстраиваем генератор на 180-200 Вольт (предыдущая настройка была нужна для первого пуска ламп, чтобы ничего не сгорело. При подключении ламп напряжение просядет, и его нужно будет выкрутить обратно).</li>
+                <li>Есть смысл оставить часы поработать на этой прошивке пару часов, чтобы лампы пришли в себя, т.к. каждый индикатор перебирает все цифры на максимальной яркости без динамической индикации.</li>
+                <li>Если всё нормально – прошиваем актуальную прошивку часов&nbsp;<strong>nixieClock_2_v2.5</strong>&nbsp;и наслаждаемся!</li>
+            </ol>
+        </div>
+        </div>
+    </div>
+</section>
 <i class="fa fa-chevron-circle-up fa-3x" aria-hidden="true"></i>
 </body>
 </html>
